@@ -1,0 +1,32 @@
+{
+  "name": "hitnaari-website",
+  "private": true,
+  "version": "1.0.0",
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "tsc -b && vite build",
+    "assets": "tsx scripts/prepare-assets.ts",
+    "lambda:build": "tsx scripts/build-lambda.ts",
+    "package": "tsx scripts/package-lambda.ts",
+    "verify": "tsx scripts/verify.ts"
+  },
+  "dependencies": {
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1",
+    "react-router-dom": "^6.30.1"
+  },
+  "devDependencies": {
+    "@types/node": "^20.17.6",
+    "@types/react": "^18.3.12",
+    "@types/react-dom": "^18.3.1",
+    "@vitejs/plugin-react": "^4.3.4",
+    "esbuild": "^0.25.0",
+    "ffmpeg-static": "^5.2.0",
+    "playwright": "^1.49.1",
+    "sharp": "^0.34.0",
+    "tsx": "^4.19.2",
+    "typescript": "~5.6.3",
+    "vite": "^5.4.19"
+  }
+}
