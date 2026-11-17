@@ -8,6 +8,15 @@ export const SITE = {
   facebook: "https://www.facebook.com/profile.php?id=100070978519202",
 };
 
+// Media lives in S3 (originals are archived privately; only media/ is public).
+export const MEDIA_BASE =
+  import.meta.env.VITE_MEDIA_BASE ??
+  "https://hitnaari-media.s3.eu-central-1.amazonaws.com/media";
+
+export function mediaUrl(path: string): string {
+  return `${MEDIA_BASE}${path}`;
+}
+
 export function whatsappLink(message: string): string {
   return `https://wa.me/${SITE.phoneIntl}?text=${encodeURIComponent(message)}`;
 }

@@ -26,12 +26,15 @@ const MIME: Record<string, string> = {
   ".txt": "text/plain; charset=utf-8",
 };
 
+// Media is served from S3; keep this in sync with MEDIA_BASE in src/data/site.ts
+const MEDIA_ORIGIN = "https://hitnaari-media.s3.eu-central-1.amazonaws.com";
+
 const BASE_HEADERS = {
   "x-content-type-options": "nosniff",
   "x-frame-options": "DENY",
   "referrer-policy": "strict-origin-when-cross-origin",
   "content-security-policy":
-    "default-src 'self'; script-src 'self'; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src https://fonts.gstatic.com; img-src 'self' data:; media-src 'self'; connect-src 'self'; frame-ancestors 'none'; base-uri 'self'",
+    `default-src 'self'; script-src 'self'; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src https://fonts.gstatic.com; img-src 'self' data: ${MEDIA_ORIGIN}; media-src 'self' ${MEDIA_ORIGIN}; connect-src 'self'; frame-ancestors 'none'; base-uri 'self'`,
 };
 
 const BINARY_EXTENSIONS = new Set([

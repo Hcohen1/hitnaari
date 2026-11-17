@@ -1,3 +1,5 @@
+import { mediaUrl } from "./site";
+
 export interface VideoItem {
   src: string;
   poster: string;
@@ -40,16 +42,16 @@ export const SHOWS: ShowData[] = [
       "ערב של צחוק, הזדהות וחיבוק ענק – לכל אמא ובת.",
     ],
     audience: ["ערבי אמהות ובנות", "אירועי קהילה ומתנ\"סים", "מפגשי נשים"],
-    flyers: ["/media/flyers/ima/1.webp", "/media/flyers/ima/2.webp"],
+    flyers: [mediaUrl("/flyers/ima/1.webp"), mediaUrl("/flyers/ima/2.webp")],
     videos: [
       {
-        src: "/media/videos/v8.mp4",
-        poster: "/media/videos/v8.jpg",
+        src: mediaUrl("/videos/v8.mp4"),
+        poster: mediaUrl("/videos/v8.jpg"),
         label: "טיזר – אין לי אמא אחרת",
       },
       {
-        src: "/media/videos/v4.mp4",
-        poster: "/media/videos/v4.jpg",
+        src: mediaUrl("/videos/v4.mp4"),
+        poster: mediaUrl("/videos/v4.jpg"),
         label: "הקהל בערב אמהות ובנות",
       },
     ],
@@ -102,26 +104,26 @@ export const SHOWS: ShowData[] = [
       "חודש אלול וימי התעוררות",
       "ערבי אמהות ובנות",
     ],
-    flyers: ["/media/flyers/hitnaari/1.webp", "/media/flyers/hitnaari/2.webp"],
+    flyers: [mediaUrl("/flyers/hitnaari/1.webp"), mediaUrl("/flyers/hitnaari/2.webp")],
     videos: [
       {
-        src: "/media/videos/v2.mp4",
-        poster: "/media/videos/v2.jpg",
+        src: mediaUrl("/videos/v2.mp4"),
+        poster: mediaUrl("/videos/v2.jpg"),
         label: "התנערי – זה לא רק שם",
       },
       {
-        src: "/media/videos/v6.mp4",
-        poster: "/media/videos/v6.jpg",
+        src: mediaUrl("/videos/v6.mp4"),
+        poster: mediaUrl("/videos/v6.jpg"),
         label: "הקהל בסמינריון",
       },
       {
-        src: "/media/videos/v5.mp4",
-        poster: "/media/videos/v5.jpg",
+        src: mediaUrl("/videos/v5.mp4"),
+        poster: mediaUrl("/videos/v5.jpg"),
         label: "קטע מהמופע",
       },
       {
-        src: "/media/videos/v3.mp4",
-        poster: "/media/videos/v3.jpg",
+        src: mediaUrl("/videos/v3.mp4"),
+        poster: mediaUrl("/videos/v3.jpg"),
         label: "מול הקהל באולם",
       },
     ],
@@ -169,11 +171,11 @@ export const SHOWS: ShowData[] = [
       "מפגשי גיבוש",
       "ערבי מורות",
     ],
-    flyers: ["/media/flyers/isha/1.webp", "/media/flyers/isha/2.webp"],
+    flyers: [mediaUrl("/flyers/isha/1.webp"), mediaUrl("/flyers/isha/2.webp")],
     videos: [
       {
-        src: "/media/videos/v1.mp4",
-        poster: "/media/videos/v1.jpg",
+        src: mediaUrl("/videos/v1.mp4"),
+        poster: mediaUrl("/videos/v1.jpg"),
         label: "טיזר – אשה עניין של גישה",
       },
     ],

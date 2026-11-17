@@ -5,3 +5,4 @@ website/dist-lambda/
 website/dist-staging/
 website/function.zip
 website/.frames/
+media-build/

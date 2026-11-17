@@ -1,6 +1,6 @@
 import { Link } from "react-router-dom";
 import { SHOWS } from "../data/shows";
-import { SITE, whatsappLink, WHATSAPP_DEFAULT_MSG } from "../data/site";
+import { SITE, whatsappLink, WHATSAPP_DEFAULT_MSG, mediaUrl } from "../data/site";
 import ShowCard from "../components/ShowCard";
 import Testimonials from "../components/Testimonials";
 import ContactCta from "../components/ContactCta";
@@ -87,12 +87,12 @@ export default function HomePage() {
           </div>
           <div className="about-gallery">
             <img
-              src="/media/flyers/general/2.webp"
+              src={mediaUrl("/flyers/general/2.webp")}
               alt="הקהל של תיאטרון התנערי"
               loading="lazy"
             />
             <img
-              src="/media/flyers/general/1.webp"
+              src={mediaUrl("/flyers/general/1.webp")}
               alt="לוח הופעות של תיאטרון התנערי"
               loading="lazy"
             />
