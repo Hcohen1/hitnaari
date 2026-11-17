@@ -41,7 +41,18 @@ export const SHOWS: ShowData[] = [
     ],
     audience: ["ערבי אמהות ובנות", "אירועי קהילה ומתנ\"סים", "מפגשי נשים"],
     flyers: ["/media/flyers/ima/1.webp", "/media/flyers/ima/2.webp"],
-    videos: [],
+    videos: [
+      {
+        src: "/media/videos/v8.mp4",
+        poster: "/media/videos/v8.jpg",
+        label: "טיזר – אין לי אמא אחרת",
+      },
+      {
+        src: "/media/videos/v4.mp4",
+        poster: "/media/videos/v4.jpg",
+        label: "הקהל בערב אמהות ובנות",
+      },
+    ],
     testimonials: [
       {
         quote:
@@ -92,7 +103,28 @@ export const SHOWS: ShowData[] = [
       "ערבי אמהות ובנות",
     ],
     flyers: ["/media/flyers/hitnaari/1.webp", "/media/flyers/hitnaari/2.webp"],
-    videos: [],
+    videos: [
+      {
+        src: "/media/videos/v2.mp4",
+        poster: "/media/videos/v2.jpg",
+        label: "התנערי – זה לא רק שם",
+      },
+      {
+        src: "/media/videos/v6.mp4",
+        poster: "/media/videos/v6.jpg",
+        label: "הקהל בסמינריון",
+      },
+      {
+        src: "/media/videos/v5.mp4",
+        poster: "/media/videos/v5.jpg",
+        label: "קטע מהמופע",
+      },
+      {
+        src: "/media/videos/v3.mp4",
+        poster: "/media/videos/v3.jpg",
+        label: "מול הקהל באולם",
+      },
+    ],
     testimonials: [
       {
         quote:
@@ -138,7 +170,13 @@ export const SHOWS: ShowData[] = [
       "ערבי מורות",
     ],
     flyers: ["/media/flyers/isha/1.webp", "/media/flyers/isha/2.webp"],
-    videos: [],
+    videos: [
+      {
+        src: "/media/videos/v1.mp4",
+        poster: "/media/videos/v1.jpg",
+        label: "טיזר – אשה עניין של גישה",
+      },
+    ],
     testimonials: [
       {
         quote:

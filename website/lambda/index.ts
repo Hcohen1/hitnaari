@@ -93,9 +93,11 @@ export async function handler(event: ApiGatewayV2Event) {
 
   const isHtmlRequest = filePath.endsWith(".html");
 
-  // SPA fallback: unknown non-file paths serve the app shell
+  // SPA fallback: unknown extensionless paths serve the app shell
   if (!existsSync(filePath) || !statSync(filePath).isFile()) {
-    if (isHtmlRequest) {
+    const base = filePath.split(/[\\/]/).pop() ?? "";
+    const hasExtension = /\.[^./\\]{1,8}$/.test(base);
+    if (isHtmlRequest || !hasExtension) {
       const indexHtml = join(STATIC_ROOT, "index.html");
       const body = readFileSync(indexHtml);
       return {
