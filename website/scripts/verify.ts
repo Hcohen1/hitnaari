@@ -124,8 +124,11 @@ async function main() {
   }
 
   console.log("\n[3] Direct URL loads (SPA fallback via Lambda)");
+  const base = url.replace(/\/+$/, "");
   for (const s of SHOW_PAGES) {
-    const resp = await page.goto(`${url}${s.path}`, { waitUntil: "networkidle" });
+    const resp = await page.goto(`${base}${s.path}`, {
+      waitUntil: "networkidle",
+    });
     check(`${s.path} direct load returns 200`, resp?.status() === 200);
     check(
       `${s.path} direct load renders h1`,
